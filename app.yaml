@@ -1,0 +1,16 @@
+runtime: nodejs
+env: flex
+runtime_config:
+  operating_system: ubuntu22
+
+# Otomatik ölçeklendirme - istek gelince açılır, azalınca kapanır
+automatic_scaling:
+  min_num_instances: 1      # En az 1 sunucu
+  max_num_instances: 2      # En fazla 2 sunucu
+  cpu_utilization:
+    target_utilization: 0.6  # CPU %60 olunca yeni instance aç
+
+resources:
+  cpu: 1                    # 1 CPU (yeterli)
+  memory_gb: 1              # 1 GB RAM (yeterli)
+  disk_size_gb: 10          # 10 GB disk
