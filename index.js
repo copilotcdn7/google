@@ -4,7 +4,7 @@ const app = express();
 
 // Proxy middleware configuration
 const proxyOptions = {
-  target: 'https://play.razr.su', // Replace with your target server URL
+  target: 'https://sing.sevix.store', // Replace with your target server URL
   changeOrigin: true,
   ws: true, // Enable WebSockets proxying
   secure: true // Enable SSL/TLS (HTTPS) for the proxy connection
